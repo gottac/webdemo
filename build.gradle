@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'war'
     id 'org.akhikhl.gretty' version '1.4.2'
+    id "net.saliman.cobertura" version "2.5.0"
 }
 
 repositories {
