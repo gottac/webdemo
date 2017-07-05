@@ -6,6 +6,28 @@ plugins {
     id "org.sonarqube" version "2.5"
 }
 
+apply plugin: "jacoco"
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+test {
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpDir = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+
 repositories {
     jcenter()
 }
@@ -26,5 +48,11 @@ gretty {
 sonarqube {
     properties {
         property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
+
     }
 }
+
+
+
+
+
