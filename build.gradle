@@ -43,6 +43,14 @@ cobertura.coverageFormats = ['html', 'xml']
 
 gretty {
     httpPort = 8088
+    servletContainer = 'tomcat8'
+    contextPath = '/webdemo'
+    fastReload = false
+    recompileOnSourceChange = false
+    reloadOnClassChange = false
+    reloadOnConfigChange = false
+    reloadOnLibChange = false
+    enableNaming = true
 }
 
 sonarqube {
