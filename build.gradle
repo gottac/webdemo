@@ -47,7 +47,6 @@ cobertura.coverageFormats = ['html', 'xml']
 
 gretty {
     httpPort = 8088
-    integrationTestTask = 'test'
 }
 
 sonarqube {
